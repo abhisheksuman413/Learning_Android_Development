@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067199454039",
+    "project_id": "learning-10a02",
+    "storage_bucket": "learning-10a02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067199454039:android:64ae8ecb831aac86afbc12",
+        "android_client_info": {
+          "package_name": "com.fps69.learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2p0-810oI5-fDQ9Mx3f_-CwT0FnMAjzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
