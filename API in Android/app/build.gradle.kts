@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.fps69.recycler_view"
+    namespace = "com.fps69.myapplication"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.fps69.recycler_view"
+        applicationId = "com.fps69.myapplication"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,7 +33,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures{
+
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -49,6 +50,12 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
 
-//  Glide dependency kotlin >>> For open image url
+    // This is retrofit dependency
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // This is converter Gson dependency
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //  Glide dependency kotlin >>> For open image url
     implementation("com.github.bumptech.glide:glide:4.16.0")
 }

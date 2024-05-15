@@ -17,6 +17,18 @@ class MainActivity : AppCompatActivity() {
 
 
         // Set data to newsArraylist
+        fetchuserdata()
+
+        // Seting Adaptor to RecyclerView
+         setRecyclerView()
+
+    }
+
+
+
+    // Set data to newsArraylist
+    fun fetchuserdata(){
+        // Set data to newsArraylist
         val newsImageArray = arrayOf(
             R.drawable.pic1,
             R.drawable.pic2,
@@ -50,7 +62,12 @@ class MainActivity : AppCompatActivity() {
             newsArraylist.add(news)
         }
 
+    }
 
+
+
+    // Seting Adaptor to RecyclerView
+    fun setRecyclerView(){
         // Seting Adaptor to RecyclerView
 
         myRecyclerView = findViewById<RecyclerView>(R.id.Rv1)
@@ -74,8 +91,6 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
-
-
-
     }
+
 }
