@@ -2,11 +2,13 @@ package com.fps69.myapplication
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fps69.myapplication.databinding.EachItemBinding
 
-class MyAdaptor(private val ItemListSEC: List<Recipe>): RecyclerView.Adapter<MyAdaptor.ResturentItemViewHolder>() {
+class MyAdaptor(private val ItemListSEC: List<Recipe>,private val Listener : ItemCilckListener):
+      RecyclerView.Adapter<MyAdaptor.ResturentItemViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResturentItemViewHolder {
@@ -44,7 +46,22 @@ class MyAdaptor(private val ItemListSEC: List<Recipe>): RecyclerView.Adapter<MyA
 
             }
 
+            itembinding.root.setOnClickListener {
+
+                Listener.OnItemClick(adapterPosition) // adapterPosition current item ka position de dega
+
+            }
+
         }
 
+    }
+
+
+    interface ItemCilckListener {
+
+        fun OnItemClick(position: Int){
+
+        }
+        
     }
 }

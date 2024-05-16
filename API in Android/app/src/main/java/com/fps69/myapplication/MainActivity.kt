@@ -1,5 +1,6 @@
 package com.fps69.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -60,7 +61,26 @@ class MainActivity : AppCompatActivity() {
         binding.RvResturent.apply {
             layoutManager= LinearLayoutManager(this@MainActivity)
             hasFixedSize()
-            adapter=MyAdaptor(recipes)
+            adapter=MyAdaptor(recipes,object:MyAdaptor.ItemCilckListener{
+                override fun OnItemClick(position: Int) {
+
+                    val intent = Intent(this@MainActivity,ItemDetalis::class.java)
+                    intent.putExtra("name",recipes[position].name)
+                    intent.putExtra("rating",recipes[position].rating)
+                    intent.putExtra("image",recipes[position].image)
+                    intent.putExtra("prepTimeMinutes",recipes[position].prepTimeMinutes)
+                    intent.putExtra("cuisine",recipes[position].cuisine)
+                    intent.putExtra("cookTimeMinutes",recipes[position].cookTimeMinutes)
+                    intent.putExtra("difficulty",recipes[position].difficulty)
+                    intent.putExtra("servings",recipes[position].servings)
+                    intent.putExtra("caloriesPerServing",recipes[position].caloriesPerServing)
+                    intent.putStringArrayListExtra("instructions",ArrayList<String>(recipes[position].instructions))
+                    intent.putStringArrayListExtra("ingredients",ArrayList<String>(recipes[position].ingredients))
+                    startActivity(intent)
+
+
+                }
+            })
 
         }
 
