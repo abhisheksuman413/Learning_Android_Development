@@ -24,11 +24,5 @@ class NewsDetails : AppCompatActivity() {
         binding.newsContent.text=newsContent
         binding.newsHeading.text=heading
         binding.newsImage.setImageResource(imageId)
-
-
-
-
-
-
     }
 }
