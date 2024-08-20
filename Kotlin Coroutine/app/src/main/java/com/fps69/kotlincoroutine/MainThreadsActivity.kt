@@ -4,6 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.fps69.kotlincoroutine.databinding.ActivityMainThreadsBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 import kotlin.concurrent.thread
 
 class MainThreadsActivity : AppCompatActivity() {
@@ -32,6 +37,21 @@ class MainThreadsActivity : AppCompatActivity() {
                                         >>> Agr yha iss function ko execute krte hai to hmara main threads block nhi hoga or UI update ho jyega
                                         >>> Because ye function yha main threads pe nhi background threads pe run krega */
                 }
+            }
+
+            BTN4LongTaskCoroutine.setOnClickListener {
+
+                // Way to make Coroutine in kotlin
+                CoroutineScope(Dispatchers.IO).launch {
+                    Log.d("cheack"," 1:- ${Thread.currentThread().name}")
+                }
+                GlobalScope.launch(Dispatchers.Main){
+                    Log.d("cheack"," 2:- ${Thread.currentThread().name}")
+                }
+                MainScope().launch(Dispatchers.Default){
+                    Log.d("cheack"," 3:- ${Thread.currentThread().name}")
+                }
+
             }
         }
 
