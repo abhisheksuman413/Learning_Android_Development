@@ -252,7 +252,7 @@ class JobHierarchyActivity : AppCompatActivity() {
         parentjob.cancel()
         parentjob.join()
         Log.d("cheack","Parent job Completed")
-        
+
     }
 
 
