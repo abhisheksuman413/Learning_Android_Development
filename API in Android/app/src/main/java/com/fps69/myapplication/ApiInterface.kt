@@ -8,3 +8,6 @@ interface ApiInterface {
     @GET("recipes")
     fun getProductData(): Call<UserDataClass>
 }
+
+
+//sancggadcvg
