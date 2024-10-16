@@ -1,5 +1,6 @@
 package com.fps69.databinding
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,10 @@ class TwoWayActivity : AppCompatActivity() {
 
         binding.mainViewModel=mainViewModel
         binding.lifecycleOwner= this
+
+        binding.BTNBindingAdapters.setOnClickListener {
+            startActivity(Intent(this@TwoWayActivity, MainActivity2::class.java))
+        }
 
 
 

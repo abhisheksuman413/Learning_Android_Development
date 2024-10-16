@@ -1,16 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("kotlin-kapt")  // Apply the Kapt plugin
 
+    id ("kotlin-kapt") // This annotation processor for kotlin
 }
 
 android {
-    namespace = "com.fps69.databinding"
+    namespace = "com.fps69.roomdatabase"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.fps69.databinding"
+        applicationId = "com.fps69.roomdatabase"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -36,7 +36,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -54,17 +54,14 @@ dependencies {
 
 
 
+    // dependencies For room Database and Kapt
 
-    // ViewModel
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
-    // LiveData
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
-
-
-    // Glide (add plugin also)
-    implementation ("com.github.bumptech.glide:glide:4.15.1")
-    kapt ("com.github.bumptech.glide:compiler:4.15.1")
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.2.4")
 
 
-
+//    dependencies For coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")  // This core library
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0") // This is android specific library
 }

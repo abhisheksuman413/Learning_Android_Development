@@ -47,6 +47,15 @@
 
             />
 
+        <Button
+            android:id="@+id/BTNBindingAdapters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Next Page BindingAdapters"
+            android:textSize="24sp"
+
+            />
 
 
     </LinearLayout>
