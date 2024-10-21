@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MVVMWithRetrofit"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".Api.MainActivityd"
             android:exported="false" />
         <activity
