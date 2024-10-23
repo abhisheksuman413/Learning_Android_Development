@@ -1,14 +1,15 @@
-package com.fps69.mvvmwithretrofit.Api
+package com.fps69.abhishek.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitHelper {
+object RetrofitBuilder {
 
 
-    private const val BASE_URL = "https://newsapi.org/"
+    private const val BASE_URL = "https://dummyapi.online/api/"
 
-    fun getInstance(): Retrofit{
+
+    fun getInstance() : Retrofit{
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())

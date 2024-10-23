@@ -36,17 +36,9 @@ class MainActivity : AppCompatActivity() {
         mainVieModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(MainViewModel::class.java)
 
 
-//        try {
-//            mainVieModel.quotes.observe(this, Observer {
-//                Log.d("abhi", it.results.toString())
-//            })
-//        }catch (e:Exception){
-//            Log.d("abhi",e.message.toString())
-//
-//        }
 
         mainVieModel.quotes.observe(this, Observer {
-            Log.d("abhi", it.results.toString())
+            Log.d("abhi", it.toString())
         })
 
     }

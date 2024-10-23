@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.fps69.mvvmwithretrofit"
+    namespace = "com.fps69.abhishek"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.fps69.mvvmwithretrofit"
+        applicationId = "com.fps69.abhishek"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -34,11 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
-
-    buildFeatures {
-        dataBinding = true
-    }
 }
 
 dependencies {
@@ -51,6 +46,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 
 
     // For retrofit
@@ -72,8 +69,4 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.6.1")
     // To use Kotlin annotation processing tool (kapt)
     kapt ("androidx.room:room-compiler:2.6.1")
-    // Room With Coroutine
-    implementation("androidx.room:room-ktx:2.2.4")
-
-
 }

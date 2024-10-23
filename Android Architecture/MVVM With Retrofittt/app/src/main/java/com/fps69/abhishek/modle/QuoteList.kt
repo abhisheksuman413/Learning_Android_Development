@@ -1,4 +1,4 @@
-package com.fps69.mvvmwithretrofit.Modle
+package com.fps69.abhishek.modle
 
 data class QuoteList(
     val count: Int,
