@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val quoteService = RetrofitHelper.getInstance().create(QuoteService::class.java)
-        val repository = QuotesRepository(quoteService)
+        val repository = (application as NewsApplication).newsRepository
+
         mainVieModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(MainViewModel::class.java)
 
 
