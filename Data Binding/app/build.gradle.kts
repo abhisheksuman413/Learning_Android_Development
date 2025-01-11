@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id ("kotlin-kapt")  // Apply the Kapt plugin
 
+
 }
 
 android {

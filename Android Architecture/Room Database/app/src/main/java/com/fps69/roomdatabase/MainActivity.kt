@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.main.setOnClickListener {
 
-
             dtabase.contactDao().getContact().observe(this, Observer {
                 Log.d("Abhishek", it.toString())
             })
