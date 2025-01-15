@@ -1,5 +1,7 @@
 package com.fps69.mvvmwithretrofit.Repository
 
+import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.fps69.mvvmwithretrofit.Api.QuoteService
@@ -8,7 +10,8 @@ import com.fps69.mvvmwithretrofit.room.NewsDatabase
 
 class QuotesRepository(
     private val quoteService: QuoteService,
-    private val newsDatabase: NewsDatabase
+    private val newsDatabase: NewsDatabase,
+    private val applicationContext: Context
 ) {
 
 
@@ -32,6 +35,9 @@ class QuotesRepository(
             }
             newsDatabase.newsDao().aadNews(articles)
             quoteLiveDat.postValue(result.body())
+        }
+        else{
+            Log.d("abhi", "Emptyyyyyyyyyyyyy")
         }
     }
 }

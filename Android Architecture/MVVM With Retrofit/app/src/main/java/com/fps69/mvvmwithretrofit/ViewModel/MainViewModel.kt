@@ -13,7 +13,7 @@ class MainViewModel( private val repository : QuotesRepository)  : ViewModel() {
 
 
     init {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.Main) {
             repository.getQuotes("business",1)
         }
     }

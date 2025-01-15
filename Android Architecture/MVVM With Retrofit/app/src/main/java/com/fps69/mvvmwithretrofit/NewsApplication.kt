@@ -21,7 +21,7 @@ class NewsApplication : Application() {
         val quoteService = RetrofitHelper.getInstance().create(QuoteService::class.java)
 
         val database = NewsDatabase.getDatabase(applicationContext)
-         newsRepository = QuotesRepository(quoteService,database)
+         newsRepository = QuotesRepository(quoteService,database, applicationContext)
 
     }
 }
