@@ -12,6 +12,9 @@ class MainViewModel( private val repository : QuotesRepository)  : ViewModel() {
 
 
 
+
+    val abhi = QuotesRepository()
+
     init {
         viewModelScope.launch(Dispatchers.Main) {
             repository.getQuotes("business",1)
