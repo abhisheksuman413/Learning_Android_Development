@@ -38,7 +38,7 @@ class QuotesRepository(
         }
         else{
             Log.d("abhi", "Emptyyyyyyyyyyyyy")
-            Log.d("abhi", "Emptyyyyyyyyyyyyy")
+
         }
     }
 }
